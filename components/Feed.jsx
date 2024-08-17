@@ -35,22 +35,20 @@ const Feed = () => {
   }, []);
 
   return (
-    <div>
-      <section className="feed">
-        <form className="relative w-full flex-center">
-          <input
-            type="text"
-            placeholder="Search tag or username"
-            value={searchPost}
-            onChange={handleSearchChange}
-            className="search_input peer"
-            required
-          />
-        </form>
+    <section className="feed">
+      <form className="relative w-full flex-center">
+        <input
+          type="text"
+          placeholder="Search tag or username"
+          value={searchPost}
+          // onChange={handleSearchChange}
+          className="search_input peer"
+          required
+        />
+      </form>
 
-        <PromptCardList data={posts} handleTagClick={() => {}} />
-      </section>
-    </div>
+      <PromptCardList data={posts} handleTagClick={() => {}} />
+    </section>
   );
 };
 
